@@ -1,6 +1,6 @@
 # GigAegis: Parametric Income Protection for the Indian Gig Economy 🚀
 
-**Guidewire DEVTrails 2026 Hackathon** | **Team: Mighty Bytey**
+**Guidewire DEVTrails 2026 Hackathon** | **Team: Mighty Bitey**
 
 > Secure the earning power of India's delivery partners against catastrophic urban weather events. Zero paperwork. Instant liquidity. Complete transparency.
 
@@ -61,4 +61,4 @@ Security must not punish honest workers experiencing genuine infrastructure fail
 ---
 
 *GigAegis. Automated resilience for the modern gig economy.*
-# Mighty_Bytey_GUIDEWIRE_2026
+# Mighty_Bitey_GUIDEWIRE_2026
