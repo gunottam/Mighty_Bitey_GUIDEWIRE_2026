@@ -38,19 +38,25 @@ We leverage a modern, event-driven architecture heavily infused with machine lea
 
 Operating a parametric trigger model without manual adjusters exposes the liquidity pool to severe moral hazard. To address the strict **24-hour crisis requirement** and comprehensively **avoid regulatory fines**, GigAegis integrates a multi-layered adversarial defense mechanism. 
 
-How do we defend against a sophisticated syndicate of 500 workers attempting to instantly drain the pool by spoofing GPS coordinates from their homes during a fake storm? 
-
 ### 1. Edge-Level Telemetry
-We establish a zero-trust environment directly on the worker's device. Our PWA and native wrappers heavily poll **Android `isMock()` APIs** to detect location tampering in real time. We actively deploy **Runtime Application Self-Protection (RASP)** to identify root-cloaking, hooking frameworks, and catch basic app cloning attempts before a fake session can even be instantiated.
+We establish a zero-trust environment directly on the worker's device. Our PWA and native wrappers heavily poll **Android `isMock()` APIs** to detect location tampering in real time. We actively deploy **Runtime Application Self-Protection (RASP)** to identify root-cloaking and catch basic app cloning.
 
 ### 2. Sensor Fusion (Physical Reality Check)
-GPS coordinates alone mean nothing. We enforce a state of Physical Reality by fusing geospatial data with the device's internal **accelerometer and gyroscope**. If the GPS telemetry indicates high-speed traversal through a supposedly flooded zone, but the accelerometer registers absolutely **zero kinetic force** (i.e., the device is sitting perfectly flat on a table), the claim sequence is instantly flagged as adversarial.
+GPS coordinates alone mean nothing. We enforce a state of Physical Reality by fusing geospatial data with the device's internal **accelerometer and gyroscope**. By extracting the device's triaxial acceleration vectors, we mathematically derive physical velocity to cross-reference kinetic reality with GPS claims:
+
+$$v = \int a \, dt$$
+
+If the GPS telemetry indicates high-speed traversal through a flooded zone, but the accelerometer registers zero kinetic force (velocity is zero), the claim sequence is instantly flagged.
 
 ### 3. Network Analysis (Graph Neural Networks)
-To detect coordinated flash-mob fraud, we deploy advanced Graph Neural Networks (GNNs). We model incoming claims as connected nodes. The GNN analyzes the topology to detect highly anomalous, high-density clusters of claims that share identical hardware IDs or are routing through the exact same **Wi-Fi BSSIDs** simultaneously. Upon detecting this syndicate pattern, the relevant segment of the liquidity pool is instantly frozen.
+To detect coordinated flash-mob fraud (the 500-worker syndicate), we deploy advanced Graph Neural Networks (GNNs). We model incoming claims as connected nodes, identifying highly anomalous clusters sharing identical hardware IDs or Wi-Fi BSSIDs. To prioritize massive structural anomalies and isolate organized fraud rings, we evaluate data segments using a custom mathematical fitness function:
+
+$$fitness = \frac{abs\_anom\_amt \times rel\_amt}{level^{1.2}}$$
+
+Upon detecting this syndicate pattern, the relevant segment of the liquidity pool is instantly frozen.
 
 ### 4. UX Balance
-Security must not punish honest workers experiencing genuine infrastructure failure. Instead of instituting instant, permanent bans on suspicious telemetry, flagged accounts are shifted into a **"Pending Verification"** state. They are prompted via the UI to submit a live, localized photo of the extreme weather conditions to unlock their payout. Furthermore, if the telecommunications network genuinely collapses during the storm, their offline sensor telemetry is securely cached and cryptographically signed on the device, to be uploaded and verified automatically when the network restores.
+Security must not punish honest workers experiencing genuine infrastructure failure. Flagged accounts are shifted into a **"Pending Verification"** state. They are prompted to submit a live photo of the extreme weather to unlock their payout. If the network collapses during the storm, their offline sensor telemetry is securely cached and cryptographically signed on the device, uploading automatically when the network restores.
 
 ---
 
