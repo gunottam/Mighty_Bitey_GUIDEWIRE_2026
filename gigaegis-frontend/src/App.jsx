@@ -48,7 +48,7 @@ function App() {
 
   useEffect(() => {
     // Initial fetch to sync global liquidity pool without crashing UI
-    fetch('http://localhost:3000/api/liquidity')
+    fetch('/api/liquidity')
       .then(res => res.json())
       .then(data => { if (data.liquidity !== undefined) setReservePool(data.liquidity); })
       .catch(err => console.error("Initial load fallback:", err));
@@ -56,7 +56,7 @@ function App() {
 
   useEffect(() => {
     // Dynamically fetch Oracular metrics based on active Registered Zone
-    fetch(`http://localhost:3000/api/live-risk/${regZone}`)
+    fetch(`/api/live-risk/${regZone}`)
       .then(res => res.json())
       .then(data => {
          if (data.riskScore !== undefined) {
@@ -77,7 +77,7 @@ function App() {
      let pollInternal;
      if (workerWallet) {
          pollInternal = setInterval(() => {
-             fetch(`http://localhost:3000/api/worker/${workerWallet}`)
+             fetch(`/api/worker/${workerWallet}`)
                .then(res => res.json())
                .then(data => {
                    if(data.targetWorker) {
@@ -112,7 +112,7 @@ function App() {
   const triggerLiveOracleCheck = async () => {
       setLogs(prev => [...prev, `[${new Date().toLocaleTimeString()}] [AUTO] Polling API Telemetry...`]);
       try {
-          const resp = await fetch('http://localhost:3000/api/disaster-check');
+          const resp = await fetch('/api/disaster-check');
           const data = await resp.json();
           if (data.status === "DISASTER_TRIGGER") {
               setLogs(prev => [...prev, `[${new Date().toLocaleTimeString()}] [CRITICAL] ORACLE THRESHOLD BREACHED. Executing payload natively.`]);
@@ -131,7 +131,7 @@ function App() {
     setIsProcessing(true);
     setLogs(prev => [...prev, `[${new Date().toLocaleTimeString()}] SYN... Submitting Premium Generation...`]);
     try {
-      const response = await fetch('http://localhost:3000/api/collect-premiums', { method: 'POST' });
+      const response = await fetch('/api/collect-premiums', { method: 'POST' });
       const data = await response.json();
       
       if (data.status === "SUCCESS") {
@@ -152,7 +152,7 @@ function App() {
     
     setLogs(prev => [...prev, `[${new Date().toLocaleTimeString()}] SYN... Initializing Core Engine Router for ${event}...`]);
     try {
-      const response = await fetch('http://localhost:3000/api/trigger-event', {
+      const response = await fetch('/api/trigger-event', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ zone, event_type: event, intensity_value: intensity }) 
@@ -216,7 +216,7 @@ function App() {
       if (!regName) return;
       setIsRegistering(true);
       try {
-          const response = await fetch('http://localhost:3000/api/register', {
+          const response = await fetch('/api/register', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({ name: regName, zone: regZone })

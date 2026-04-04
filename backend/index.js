@@ -47,7 +47,8 @@ const getHyperLocalPremium = (basePricing, zoneName) => {
 };
 
 // Database Connection Hook
-mongoose.connect('mongodb://127.0.0.1:27017/gigaegis', { serverSelectionTimeoutMS: 2000 })
+const mongoURI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/gigaegis';
+mongoose.connect(mongoURI, { serverSelectionTimeoutMS: 2000 })
     .then(async () => {
         console.log("[GigAegis] MongoDB Connected. Persistence Mode Active.");
         if ((await Worker.countDocuments()) === 0) {
@@ -429,4 +430,9 @@ app.post('/api/trigger-event', async (req, res) => {
     }
 });
 
-app.listen(PORT, () => console.log(`[GigAegis Backend] Active on Port ${PORT}`));
+// Vercel Serverless Deployment Architecture
+if (process.env.VERCEL) {
+    module.exports = app;
+} else {
+    app.listen(PORT, () => console.log(`[GigAegis Backend] Active on Port ${PORT}`));
+}
