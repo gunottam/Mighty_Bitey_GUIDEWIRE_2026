@@ -184,6 +184,8 @@ function App() {
                  setPayoutBannerActive(true);
                  setTimeout(() => setPayoutBannerActive(false), 9000);
             }
+            
+            setTimeout(() => setClaimStage(0), 12000); // Cleans up the trace after 12 seconds
         }, 3000);
         
         if (data.logs && Array.isArray(data.logs)) {
