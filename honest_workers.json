@@ -1,0 +1,152 @@
+[
+  {
+    "worker_id": "a1b2c3d4-1234-5678-90ab-cdef12345678",
+    "name": "Arjun Kumar",
+    "wallet_address": "0x3F5CE5FBFe3E9af3971dD833D26bA9b5C936f0bE",
+    "zone": "Koramangala",
+    "gps_lat": 12.9258,
+    "gps_lng": 77.6234,
+    "accelerometer_moving": true,
+    "hardware_id": "DEVICE_HON_001"
+  },
+  {
+    "worker_id": "b2c3d4e5-2345-6789-01bc-def012345679",
+    "name": "Priya Sharma",
+    "wallet_address": "0x8A1234BcDe5678Fa901234BcdE5678fA901234bC",
+    "zone": "Koramangala",
+    "gps_lat": 12.9312,
+    "gps_lng": 77.6201,
+    "accelerometer_moving": true,
+    "hardware_id": "DEVICE_HON_002"
+  },
+  {
+    "worker_id": "c3d4e5f6-3456-7890-12cd-ef012345678a",
+    "name": "Ravi Teja",
+    "wallet_address": "0xCDe5678Fa901234BcdE5678fA901234bC8A1234B",
+    "zone": "Koramangala",
+    "gps_lat": 12.9285,
+    "gps_lng": 77.6256,
+    "accelerometer_moving": true,
+    "hardware_id": "DEVICE_HON_003"
+  },
+  {
+    "worker_id": "d4e5f6a7-4567-8901-23de-f012345678ab",
+    "name": "Ananya Desai",
+    "wallet_address": "0xFa901234BcdE5678fA901234bC8A1234BcDe5678",
+    "zone": "Koramangala",
+    "gps_lat": 12.9341,
+    "gps_lng": 77.6189,
+    "accelerometer_moving": true,
+    "hardware_id": "DEVICE_HON_004"
+  },
+  {
+    "worker_id": "e5f6a7b8-5678-9012-34ef-012345678abc",
+    "name": "Rahul Verma",
+    "wallet_address": "0x5678fA901234bC8A1234BcDe5678Fa901234BcdE",
+    "zone": "Koramangala",
+    "gps_lat": 12.9298,
+    "gps_lng": 77.6272,
+    "accelerometer_moving": true,
+    "hardware_id": "DEVICE_HON_005"
+  },
+  {
+    "worker_id": "f6a7b8c9-6789-0123-45fa-12345678abcd",
+    "name": "Sneha Iyer",
+    "wallet_address": "0x1234bC8A1234BcDe5678Fa901234BcdE5678fA90",
+    "zone": "Koramangala",
+    "gps_lat": 12.9265,
+    "gps_lng": 77.6305,
+    "accelerometer_moving": true,
+    "hardware_id": "DEVICE_HON_006"
+  },
+  {
+    "worker_id": "a7b8c9d0-7890-1234-56ab-2345678abcde",
+    "name": "Karthik Reddy",
+    "wallet_address": "0xbC8A1234BcDe5678Fa901234BcdE5678fA901234",
+    "zone": "Koramangala",
+    "gps_lat": 12.9324,
+    "gps_lng": 77.6218,
+    "accelerometer_moving": true,
+    "hardware_id": "DEVICE_HON_007"
+  },
+  {
+    "worker_id": "b8c9d0e1-8901-2345-67bc-345678abcdef",
+    "name": "Pooja Patel",
+    "wallet_address": "0x8A1234BcDe5678Fa901234BcdE5678fA901234bC",
+    "zone": "Koramangala",
+    "gps_lat": 12.9301,
+    "gps_lng": 77.6165,
+    "accelerometer_moving": true,
+    "hardware_id": "DEVICE_HON_008"
+  },
+  {
+    "worker_id": "c9d0e1f2-9012-3456-78cd-45678abcdef0",
+    "name": "Vikash Gupta",
+    "wallet_address": "0xDe5678Fa901234BcdE5678fA901234bC8A1234Bc",
+    "zone": "Koramangala",
+    "gps_lat": 12.9278,
+    "gps_lng": 77.6241,
+    "accelerometer_moving": true,
+    "hardware_id": "DEVICE_HON_009"
+  },
+  {
+    "worker_id": "d0e1f2a3-0123-4567-89de-5678abcdef01",
+    "name": "Meera Menon",
+    "wallet_address": "0x78Fa901234BcdE5678fA901234bC8A1234BcDe56",
+    "zone": "Koramangala",
+    "gps_lat": 12.9333,
+    "gps_lng": 77.6289,
+    "accelerometer_moving": true,
+    "hardware_id": "DEVICE_HON_010"
+  },
+  {
+    "worker_id": "e1f2a3b4-1234-5678-90ef-678abcdef012",
+    "name": "Siddharth Rao",
+    "wallet_address": "0x901234BcdE5678fA901234bC8A1234BcDe5678Fa",
+    "zone": "Koramangala",
+    "gps_lat": 12.9251,
+    "gps_lng": 77.6198,
+    "accelerometer_moving": true,
+    "hardware_id": "DEVICE_HON_011"
+  },
+  {
+    "worker_id": "f2a3b4c5-2345-6789-01f0-78abcdef0123",
+    "name": "Neha Singh",
+    "wallet_address": "0xBcdE5678fA901234bC8A1234BcDe5678Fa901234",
+    "zone": "Koramangala",
+    "gps_lat": 12.9317,
+    "gps_lng": 77.6255,
+    "accelerometer_moving": true,
+    "hardware_id": "DEVICE_HON_012"
+  },
+  {
+    "worker_id": "a3b4c5d6-3456-7890-1201-8abcdef01234",
+    "name": "Aakash Nair",
+    "wallet_address": "0x5678fA901234bC8A1234BcDe5678Fa901234BcdE",
+    "zone": "Koramangala",
+    "gps_lat": 12.9288,
+    "gps_lng": 77.6222,
+    "accelerometer_moving": true,
+    "hardware_id": "DEVICE_HON_013"
+  },
+  {
+    "worker_id": "b4c5d6e7-4567-8901-2312-9abcdef01234",
+    "name": "Divya Joshi",
+    "wallet_address": "0xfA901234bC8A1234BcDe5678Fa901234BcdE5678",
+    "zone": "Koramangala",
+    "gps_lat": 12.9350,
+    "gps_lng": 77.6267,
+    "accelerometer_moving": true,
+    "hardware_id": "DEVICE_HON_014"
+  },
+  {
+    "worker_id": "c5d6e7f8-5678-9012-3423-abcdef012345",
+    "name": "Manoj Kumar",
+    "wallet_address": "0x01234bC8A1234BcDe5678Fa901234BcdE5678fA9",
+    "zone": "Koramangala",
+    "gps_lat": 12.9290,
+    "gps_lng": 77.6155,
+    "accelerometer_moving": true,
+    "hardware_id": "DEVICE_HON_015"
+  }
+]
