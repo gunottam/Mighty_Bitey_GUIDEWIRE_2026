@@ -3,150 +3,290 @@
     "worker_id": "a1b2c3d4-1234-5678-90ab-cdef12345678",
     "name": "Arjun Kumar",
     "wallet_address": "0x3F5CE5FBFe3E9af3971dD833D26bA9b5C936f0bE",
-    "zone": "Koramangala",
+    "zone": "Koramangala_1",
     "gps_lat": 12.9258,
     "gps_lng": 77.6234,
     "accelerometer_moving": true,
-    "hardware_id": "DEVICE_HON_001"
+    "hardware_id": "DEVICE_HON_001",
+    "delivery_platform": "Zomato",
+    "avg_hourly_earnings": 95,
+    "typical_hours_per_week": 48,
+    "total_deliveries": 2340,
+    "coverage_tier": "STANDARD",
+    "earnings_history": [
+      { "week_ending": "2026-04-06", "total_earnings": 4560, "hours_worked": 48, "deliveries_completed": 82 },
+      { "week_ending": "2026-03-30", "total_earnings": 4280, "hours_worked": 45, "deliveries_completed": 76 },
+      { "week_ending": "2026-03-23", "total_earnings": 4750, "hours_worked": 50, "deliveries_completed": 88 },
+      { "week_ending": "2026-03-16", "total_earnings": 3950, "hours_worked": 42, "deliveries_completed": 70 }
+    ]
   },
   {
     "worker_id": "b2c3d4e5-2345-6789-01bc-def012345679",
     "name": "Priya Sharma",
     "wallet_address": "0x8A1234BcDe5678Fa901234BcdE5678fA901234bC",
-    "zone": "Koramangala",
+    "zone": "Koramangala_2",
     "gps_lat": 12.9312,
     "gps_lng": 77.6201,
     "accelerometer_moving": true,
-    "hardware_id": "DEVICE_HON_002"
+    "hardware_id": "DEVICE_HON_002",
+    "delivery_platform": "Swiggy",
+    "avg_hourly_earnings": 78,
+    "typical_hours_per_week": 40,
+    "total_deliveries": 1890,
+    "coverage_tier": "BASIC",
+    "earnings_history": [
+      { "week_ending": "2026-04-06", "total_earnings": 3120, "hours_worked": 40, "deliveries_completed": 55 },
+      { "week_ending": "2026-03-30", "total_earnings": 3280, "hours_worked": 42, "deliveries_completed": 58 },
+      { "week_ending": "2026-03-23", "total_earnings": 2960, "hours_worked": 38, "deliveries_completed": 52 }
+    ]
   },
   {
     "worker_id": "c3d4e5f6-3456-7890-12cd-ef012345678a",
     "name": "Ravi Teja",
     "wallet_address": "0xCDe5678Fa901234BcdE5678fA901234bC8A1234B",
-    "zone": "Koramangala",
+    "zone": "Bellandur",
     "gps_lat": 12.9285,
-    "gps_lng": 77.6256,
+    "gps_lng": 77.6756,
     "accelerometer_moving": true,
-    "hardware_id": "DEVICE_HON_003"
+    "hardware_id": "DEVICE_HON_003",
+    "delivery_platform": "Zepto",
+    "avg_hourly_earnings": 110,
+    "typical_hours_per_week": 50,
+    "total_deliveries": 3210,
+    "coverage_tier": "PREMIUM",
+    "earnings_history": [
+      { "week_ending": "2026-04-06", "total_earnings": 5500, "hours_worked": 50, "deliveries_completed": 95 },
+      { "week_ending": "2026-03-30", "total_earnings": 5280, "hours_worked": 48, "deliveries_completed": 91 },
+      { "week_ending": "2026-03-23", "total_earnings": 5720, "hours_worked": 52, "deliveries_completed": 99 },
+      { "week_ending": "2026-03-16", "total_earnings": 5100, "hours_worked": 46, "deliveries_completed": 87 }
+    ]
   },
   {
     "worker_id": "d4e5f6a7-4567-8901-23de-f012345678ab",
     "name": "Ananya Desai",
     "wallet_address": "0xFa901234BcdE5678fA901234bC8A1234BcDe5678",
-    "zone": "Koramangala",
-    "gps_lat": 12.9341,
-    "gps_lng": 77.6189,
+    "zone": "HSR_Layout",
+    "gps_lat": 12.9116,
+    "gps_lng": 77.6389,
     "accelerometer_moving": true,
-    "hardware_id": "DEVICE_HON_004"
+    "hardware_id": "DEVICE_HON_004",
+    "delivery_platform": "Zomato",
+    "avg_hourly_earnings": 88,
+    "typical_hours_per_week": 44,
+    "total_deliveries": 2100,
+    "coverage_tier": "STANDARD",
+    "earnings_history": [
+      { "week_ending": "2026-04-06", "total_earnings": 3872, "hours_worked": 44, "deliveries_completed": 68 },
+      { "week_ending": "2026-03-30", "total_earnings": 4048, "hours_worked": 46, "deliveries_completed": 72 }
+    ]
   },
   {
     "worker_id": "e5f6a7b8-5678-9012-34ef-012345678abc",
     "name": "Rahul Verma",
     "wallet_address": "0x5678fA901234bC8A1234BcDe5678Fa901234BcdE",
-    "zone": "Koramangala",
-    "gps_lat": 12.9298,
-    "gps_lng": 77.6272,
+    "zone": "Whitefield_1",
+    "gps_lat": 12.9698,
+    "gps_lng": 77.7500,
     "accelerometer_moving": true,
-    "hardware_id": "DEVICE_HON_005"
+    "hardware_id": "DEVICE_HON_005",
+    "delivery_platform": "Amazon",
+    "avg_hourly_earnings": 72,
+    "typical_hours_per_week": 42,
+    "total_deliveries": 1650,
+    "coverage_tier": "BASIC",
+    "earnings_history": [
+      { "week_ending": "2026-04-06", "total_earnings": 3024, "hours_worked": 42, "deliveries_completed": 48 },
+      { "week_ending": "2026-03-30", "total_earnings": 2880, "hours_worked": 40, "deliveries_completed": 45 }
+    ]
   },
   {
     "worker_id": "f6a7b8c9-6789-0123-45fa-12345678abcd",
     "name": "Sneha Iyer",
     "wallet_address": "0x1234bC8A1234BcDe5678Fa901234BcdE5678fA90",
-    "zone": "Koramangala",
-    "gps_lat": 12.9265,
-    "gps_lng": 77.6305,
+    "zone": "Indiranagar_1",
+    "gps_lat": 12.9719,
+    "gps_lng": 77.6412,
     "accelerometer_moving": true,
-    "hardware_id": "DEVICE_HON_006"
+    "hardware_id": "DEVICE_HON_006",
+    "delivery_platform": "Swiggy",
+    "avg_hourly_earnings": 92,
+    "typical_hours_per_week": 46,
+    "total_deliveries": 2780,
+    "coverage_tier": "PREMIUM",
+    "earnings_history": [
+      { "week_ending": "2026-04-06", "total_earnings": 4232, "hours_worked": 46, "deliveries_completed": 79 },
+      { "week_ending": "2026-03-30", "total_earnings": 4400, "hours_worked": 48, "deliveries_completed": 82 },
+      { "week_ending": "2026-03-23", "total_earnings": 4140, "hours_worked": 45, "deliveries_completed": 76 }
+    ]
   },
   {
     "worker_id": "a7b8c9d0-7890-1234-56ab-2345678abcde",
     "name": "Karthik Reddy",
     "wallet_address": "0xbC8A1234BcDe5678Fa901234BcdE5678fA901234",
-    "zone": "Koramangala",
-    "gps_lat": 12.9324,
-    "gps_lng": 77.6218,
+    "zone": "Electronic_City",
+    "gps_lat": 12.8440,
+    "gps_lng": 77.6603,
     "accelerometer_moving": true,
-    "hardware_id": "DEVICE_HON_007"
+    "hardware_id": "DEVICE_HON_007",
+    "delivery_platform": "Blinkit",
+    "avg_hourly_earnings": 82,
+    "typical_hours_per_week": 50,
+    "total_deliveries": 2950,
+    "coverage_tier": "STANDARD",
+    "earnings_history": [
+      { "week_ending": "2026-04-06", "total_earnings": 4100, "hours_worked": 50, "deliveries_completed": 90 },
+      { "week_ending": "2026-03-30", "total_earnings": 3936, "hours_worked": 48, "deliveries_completed": 86 }
+    ]
   },
   {
     "worker_id": "b8c9d0e1-8901-2345-67bc-345678abcdef",
     "name": "Pooja Patel",
-    "wallet_address": "0x8A1234BcDe5678Fa901234BcdE5678fA901234bC",
-    "zone": "Koramangala",
-    "gps_lat": 12.9301,
-    "gps_lng": 77.6165,
+    "wallet_address": "0x8A1234BcDe5678Fa901234BcdE5678fA90AABB01",
+    "zone": "Marathahalli",
+    "gps_lat": 12.9562,
+    "gps_lng": 77.7019,
     "accelerometer_moving": true,
-    "hardware_id": "DEVICE_HON_008"
+    "hardware_id": "DEVICE_HON_008",
+    "delivery_platform": "Zomato",
+    "avg_hourly_earnings": 85,
+    "typical_hours_per_week": 43,
+    "total_deliveries": 2030,
+    "coverage_tier": "STANDARD",
+    "earnings_history": [
+      { "week_ending": "2026-04-06", "total_earnings": 3655, "hours_worked": 43, "deliveries_completed": 65 }
+    ]
   },
   {
     "worker_id": "c9d0e1f2-9012-3456-78cd-45678abcdef0",
     "name": "Vikash Gupta",
     "wallet_address": "0xDe5678Fa901234BcdE5678fA901234bC8A1234Bc",
-    "zone": "Koramangala",
-    "gps_lat": 12.9278,
-    "gps_lng": 77.6241,
+    "zone": "JP_Nagar",
+    "gps_lat": 12.9063,
+    "gps_lng": 77.5857,
     "accelerometer_moving": true,
-    "hardware_id": "DEVICE_HON_009"
+    "hardware_id": "DEVICE_HON_009",
+    "delivery_platform": "Dunzo",
+    "avg_hourly_earnings": 68,
+    "typical_hours_per_week": 38,
+    "total_deliveries": 1420,
+    "coverage_tier": "BASIC",
+    "earnings_history": [
+      { "week_ending": "2026-04-06", "total_earnings": 2584, "hours_worked": 38, "deliveries_completed": 42 },
+      { "week_ending": "2026-03-30", "total_earnings": 2720, "hours_worked": 40, "deliveries_completed": 45 }
+    ]
   },
   {
     "worker_id": "d0e1f2a3-0123-4567-89de-5678abcdef01",
     "name": "Meera Menon",
     "wallet_address": "0x78Fa901234BcdE5678fA901234bC8A1234BcDe56",
-    "zone": "Koramangala",
-    "gps_lat": 12.9333,
-    "gps_lng": 77.6289,
+    "zone": "Koramangala_3",
+    "gps_lat": 12.9380,
+    "gps_lng": 77.6190,
     "accelerometer_moving": true,
-    "hardware_id": "DEVICE_HON_010"
+    "hardware_id": "DEVICE_HON_010",
+    "delivery_platform": "Zomato",
+    "avg_hourly_earnings": 90,
+    "typical_hours_per_week": 47,
+    "total_deliveries": 2560,
+    "coverage_tier": "PREMIUM",
+    "earnings_history": [
+      { "week_ending": "2026-04-06", "total_earnings": 4230, "hours_worked": 47, "deliveries_completed": 81 },
+      { "week_ending": "2026-03-30", "total_earnings": 4050, "hours_worked": 45, "deliveries_completed": 77 },
+      { "week_ending": "2026-03-23", "total_earnings": 4410, "hours_worked": 49, "deliveries_completed": 85 }
+    ]
   },
   {
     "worker_id": "e1f2a3b4-1234-5678-90ef-678abcdef012",
     "name": "Siddharth Rao",
     "wallet_address": "0x901234BcdE5678fA901234bC8A1234BcDe5678Fa",
-    "zone": "Koramangala",
-    "gps_lat": 12.9251,
-    "gps_lng": 77.6198,
+    "zone": "Whitefield_2",
+    "gps_lat": 12.9600,
+    "gps_lng": 77.7450,
     "accelerometer_moving": true,
-    "hardware_id": "DEVICE_HON_011"
+    "hardware_id": "DEVICE_HON_011",
+    "delivery_platform": "Swiggy",
+    "avg_hourly_earnings": 76,
+    "typical_hours_per_week": 41,
+    "total_deliveries": 1780,
+    "coverage_tier": "STANDARD",
+    "earnings_history": [
+      { "week_ending": "2026-04-06", "total_earnings": 3116, "hours_worked": 41, "deliveries_completed": 60 }
+    ]
   },
   {
     "worker_id": "f2a3b4c5-2345-6789-01f0-78abcdef0123",
     "name": "Neha Singh",
     "wallet_address": "0xBcdE5678fA901234bC8A1234BcDe5678Fa901234",
-    "zone": "Koramangala",
-    "gps_lat": 12.9317,
-    "gps_lng": 77.6255,
+    "zone": "Indiranagar_2",
+    "gps_lat": 12.9784,
+    "gps_lng": 77.6408,
     "accelerometer_moving": true,
-    "hardware_id": "DEVICE_HON_012"
+    "hardware_id": "DEVICE_HON_012",
+    "delivery_platform": "Zepto",
+    "avg_hourly_earnings": 105,
+    "typical_hours_per_week": 44,
+    "total_deliveries": 2890,
+    "coverage_tier": "PREMIUM",
+    "earnings_history": [
+      { "week_ending": "2026-04-06", "total_earnings": 4620, "hours_worked": 44, "deliveries_completed": 78 },
+      { "week_ending": "2026-03-30", "total_earnings": 4830, "hours_worked": 46, "deliveries_completed": 82 },
+      { "week_ending": "2026-03-23", "total_earnings": 4410, "hours_worked": 42, "deliveries_completed": 74 }
+    ]
   },
   {
     "worker_id": "a3b4c5d6-3456-7890-1201-8abcdef01234",
     "name": "Aakash Nair",
-    "wallet_address": "0x5678fA901234bC8A1234BcDe5678Fa901234BcdE",
-    "zone": "Koramangala",
-    "gps_lat": 12.9288,
-    "gps_lng": 77.6222,
+    "wallet_address": "0x5678fA901234bC8A1234BcDe5678Fa901234BBBB",
+    "zone": "Koramangala_1",
+    "gps_lat": 12.9352,
+    "gps_lng": 77.6245,
     "accelerometer_moving": true,
-    "hardware_id": "DEVICE_HON_013"
+    "hardware_id": "DEVICE_HON_013",
+    "delivery_platform": "Zomato",
+    "avg_hourly_earnings": 98,
+    "typical_hours_per_week": 52,
+    "total_deliveries": 3450,
+    "coverage_tier": "PREMIUM",
+    "earnings_history": [
+      { "week_ending": "2026-04-06", "total_earnings": 5096, "hours_worked": 52, "deliveries_completed": 94 },
+      { "week_ending": "2026-03-30", "total_earnings": 4900, "hours_worked": 50, "deliveries_completed": 90 }
+    ]
   },
   {
     "worker_id": "b4c5d6e7-4567-8901-2312-9abcdef01234",
     "name": "Divya Joshi",
     "wallet_address": "0xfA901234bC8A1234BcDe5678Fa901234BcdE5678",
-    "zone": "Koramangala",
-    "gps_lat": 12.9350,
-    "gps_lng": 77.6267,
+    "zone": "HSR_Layout",
+    "gps_lat": 12.9120,
+    "gps_lng": 77.6395,
     "accelerometer_moving": true,
-    "hardware_id": "DEVICE_HON_014"
+    "hardware_id": "DEVICE_HON_014",
+    "delivery_platform": "Swiggy",
+    "avg_hourly_earnings": 80,
+    "typical_hours_per_week": 40,
+    "total_deliveries": 1950,
+    "coverage_tier": "STANDARD",
+    "earnings_history": [
+      { "week_ending": "2026-04-06", "total_earnings": 3200, "hours_worked": 40, "deliveries_completed": 58 }
+    ]
   },
   {
     "worker_id": "c5d6e7f8-5678-9012-3423-abcdef012345",
     "name": "Manoj Kumar",
     "wallet_address": "0x01234bC8A1234BcDe5678Fa901234BcdE5678fA9",
-    "zone": "Koramangala",
-    "gps_lat": 12.9290,
-    "gps_lng": 77.6155,
+    "zone": "Bellandur",
+    "gps_lat": 12.9265,
+    "gps_lng": 77.6770,
     "accelerometer_moving": true,
-    "hardware_id": "DEVICE_HON_015"
+    "hardware_id": "DEVICE_HON_015",
+    "delivery_platform": "Zomato",
+    "avg_hourly_earnings": 87,
+    "typical_hours_per_week": 46,
+    "total_deliveries": 2680,
+    "coverage_tier": "STANDARD",
+    "earnings_history": [
+      { "week_ending": "2026-04-06", "total_earnings": 4002, "hours_worked": 46, "deliveries_completed": 74 },
+      { "week_ending": "2026-03-30", "total_earnings": 3828, "hours_worked": 44, "deliveries_completed": 70 }
+    ]
   }
 ]
