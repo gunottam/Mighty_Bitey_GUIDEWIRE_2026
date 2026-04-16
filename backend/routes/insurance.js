@@ -17,6 +17,7 @@ const { predictZoneRisk, getModelMetrics } = require('../ml/riskModel');
 const { analyzeWorkerFraud } = require('../ml/fraudDetector');
 const { calculateIncomeTiedPayout, calculateIncomeTiedPremium } = require('../ml/incomeCalculator');
 const { getZone } = require('../config/zones');
+const memStore = require('../config/memStore');
 
 const isDBActive = () => mongoose.connection.readyState === 1;
 const workerHistory = new Map();
@@ -139,27 +140,15 @@ async function fetchWeatherResilient(lat, lng, zoneKey) {
   return { ...defaults, source: 'SIMULATION', latency_ms: latency, cached: false };
 }
 
-// In-memory fallback state
-let memReservePool = 100000;
-let memPremiums = 0;
-
-// Get memory workers (shared with worker routes via require cache)
-let _memWorkers = null;
-const getMemWorkers = () => {
-  if (!_memWorkers) {
-    const honest = require('../../honest_workers.json');
-    const fraud = require('../../fraud_syndicate.json');
-    _memWorkers = [...honest, ...fraud].map(w => ({ ...w, balance: w.balance || 0, is_fraud: false }));
-  }
-  return _memWorkers;
-};
+// In-memory fallback — uses shared memStore
+const getMemWorkers = () => memStore.getMemWorkers();
 
 async function fetchSystemState() {
   if (isDBActive()) {
     const t = await Treasury.findOne({});
-    return { pool: t ? t.reservePool : memReservePool, premiums: t ? t.premiumsCollected : memPremiums };
+    return { pool: t ? t.reservePool : memStore.getReservePool(), premiums: t ? t.premiumsCollected : memStore.getPremiums() };
   }
-  return { pool: memReservePool, premiums: memPremiums };
+  return { pool: memStore.getReservePool(), premiums: memStore.getPremiums() };
 }
 
 async function writeSystemLog(logType, logMessage) {
@@ -317,8 +306,8 @@ router.post('/collect-premiums', async (req, res) => {
   if (isDBActive()) {
     await Treasury.updateOne({}, { $inc: { reservePool: batchTotal, premiumsCollected: batchTotal }, last_updated: Date.now() });
   } else {
-    memReservePool += batchTotal;
-    memPremiums += batchTotal;
+    memStore.addToReservePool(batchTotal);
+    memStore.addToPremiums(batchTotal);
   }
   await writeSystemLog("SYSTEM", `ML-priced premiums collected: ₹${batchTotal} from ${workers.length} workers.`);
 
@@ -541,7 +530,7 @@ router.post('/trigger-event', async (req, res) => {
       processing_time_ms: Date.now() - startTime,
     });
   } else {
-    memReservePool -= actualPayout;
+    memStore.subtractFromReservePool(actualPayout);
   }
 
   let finalState = await fetchSystemState();

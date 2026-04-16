@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
+import MockPaymentModal from './MockPaymentModal';
 
 export default function WorkerApp({ workerWallet, regName, regZone, actualPayout, payoutBannerActive, claimStage }) {
   const [workerData, setWorkerData] = useState(null);
   const [premiumDetails, setPremiumDetails] = useState(null);
   const [zoneRisk, setZoneRisk] = useState(null);
+  const [showWithdrawModal, setShowWithdrawModal] = useState(false);
 
   useEffect(() => {
     if (!workerWallet) return;
@@ -80,6 +82,29 @@ export default function WorkerApp({ workerWallet, regName, regZone, actualPayout
         <p className="text-gray-400 text-sm font-medium">Your income is protected by AI-powered parametric insurance.</p>
       </div>
 
+      {/* ── Withdraw Button ── */}
+      {balance > 0 && (
+        <div className="px-6 mb-5">
+          <button onClick={() => setShowWithdrawModal(true)}
+            className="withdraw-btn w-full relative overflow-hidden bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 py-4 rounded-2xl font-black tracking-widest text-xs text-white transition-all border border-violet-500/50 cursor-pointer group">
+            <span className="relative z-10 flex items-center justify-center gap-2">
+              <span>Withdraw Protected Income</span>
+              <span className="text-base group-hover:scale-125 transition-transform inline-block">⚡</span>
+            </span>
+            {/* Breathing glow layer */}
+            <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              style={{ boxShadow: '0 0 25px rgba(139,92,246,0.4), 0 0 60px rgba(139,92,246,0.15)' }}></div>
+          </button>
+          <style>{`
+            .withdraw-btn { animation: breatheGlow 2.5s ease-in-out infinite; }
+            @keyframes breatheGlow {
+              0%, 100% { box-shadow: 0 0 15px rgba(139,92,246,0.2), 0 4px 20px rgba(0,0,0,0.3); }
+              50% { box-shadow: 0 0 30px rgba(139,92,246,0.4), 0 4px 30px rgba(139,92,246,0.15); }
+            }
+          `}</style>
+        </div>
+      )}
+
       {/* Policy Card */}
       <div className="px-6 mb-5">
         <div className="bg-gradient-to-tr from-emerald-500 to-teal-400 rounded-3xl p-5 shadow-[0_10px_40px_rgba(16,185,129,0.3)] relative overflow-hidden">
@@ -97,7 +122,7 @@ export default function WorkerApp({ workerWallet, regName, regZone, actualPayout
             <p className="text-teal-50 text-[10px] mt-2 font-medium opacity-90 leading-relaxed font-mono">
               Payout = ₹{hourlyRate}/hr × disruption_hours × {coverageTier === 'BASIC' ? '0.70' : coverageTier === 'STANDARD' ? '0.85' : '1.00'}
             </p>
-            <p className="text-teal-100/60 text-[10px] mt-1">Wallet: {walletFragment} · {worker.delivery_platform || 'Zomato'}</p>
+            <p className="text-teal-100/60 text-[10px] mt-1">Wallet: {walletFragment} · {worker.delivery_platform || 'Zepto'}</p>
           </div>
         </div>
       </div>
@@ -194,6 +219,14 @@ export default function WorkerApp({ workerWallet, regName, regZone, actualPayout
       </div>
 
       <div className="mt-auto h-1.5 bg-gray-700 w-1/3 mx-auto rounded-full mb-4 opacity-50"></div>
+
+      {/* MockPaymentModal */}
+      {showWithdrawModal && (
+        <MockPaymentModal
+          amount={balance}
+          onClose={() => setShowWithdrawModal(false)}
+        />
+      )}
     </div>
   );
 }

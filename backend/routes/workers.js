@@ -8,17 +8,9 @@ const { Worker } = require('../models/GigAegisDB');
 const { predictZoneRisk } = require('../ml/riskModel');
 const { calculateIncomeTiedPremium } = require('../ml/incomeCalculator');
 const { getZone, getAllZones } = require('../config/zones');
+const { getMemWorkers } = require('../config/memStore');
 
 // In-memory fallback
-let memoryWorkers = null;
-const getMemWorkers = () => {
-  if (!memoryWorkers) {
-    const honest = require('../../honest_workers.json');
-    const fraud = require('../../fraud_syndicate.json');
-    memoryWorkers = [...honest, ...fraud].map(w => ({ ...w, balance: w.balance || 0, is_fraud: false }));
-  }
-  return memoryWorkers;
-};
 const isDBActive = () => require('mongoose').connection.readyState === 1;
 
 /**

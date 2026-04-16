@@ -3,12 +3,11 @@ import { useState } from 'react';
 export default function RegisterPage({ onRegistered, setRegZone: parentSetZone }) {
   const [regName, setRegName] = useState('');
   const [regZone, setRegZone] = useState('Koramangala_1');
-  const [platform, setPlatform] = useState('Zomato');
+  const [platform, setPlatform] = useState('Zepto');
   const [hourlyRate, setHourlyRate] = useState(85);
   const [weeklyHours, setWeeklyHours] = useState(45);
   const [coverageTier, setCoverageTier] = useState('STANDARD');
   const [isRegistering, setIsRegistering] = useState(false);
-  const [previewPremium, setPreviewPremium] = useState(null);
 
   const zones = [
     { id: 'Koramangala_1', label: 'Koramangala Block 1', risk: 'HIGH', color: 'text-red-400' },
@@ -80,14 +79,26 @@ export default function RegisterPage({ onRegistered, setRegZone: parentSetZone }
               className="w-full bg-black/60 border border-gray-800 rounded-2xl px-5 py-3.5 text-[13px] font-bold text-white focus:outline-none focus:border-emerald-500 transition-colors" />
           </div>
 
-          {/* Platform */}
+          {/* Q-Commerce Platform — Two glowing toggles */}
           <div>
-            <label className="block text-[10px] uppercase font-black text-gray-500 tracking-widest mb-2 pl-1">Delivery Platform</label>
-            <div className="grid grid-cols-3 gap-2">
-              {['Zomato', 'Swiggy', 'Zepto', 'Amazon', 'Blinkit', 'Dunzo'].map(p => (
-                <button key={p} type="button" onClick={() => setPlatform(p)}
-                  className={`py-2 rounded-xl text-xs font-bold tracking-wide transition-all ${platform === p ? 'bg-red-600 text-white shadow-lg shadow-red-600/20' : 'bg-gray-800 text-gray-400 hover:bg-gray-700'}`}>
-                  {p}
+            <label className="block text-[10px] uppercase font-black text-gray-500 tracking-widest mb-2 pl-1">Q-Commerce Platform</label>
+            <div className="grid grid-cols-2 gap-3">
+              {[
+                { id: 'Zepto', icon: '⚡', tagline: '10-min delivery' },
+                { id: 'Blinkit', icon: '🟡', tagline: 'Instant grocery' },
+              ].map(p => (
+                <button key={p.id} type="button" onClick={() => setPlatform(p.id)}
+                  className={`relative py-4 rounded-2xl text-center font-bold tracking-wide transition-all duration-300 border-2 ${
+                    platform === p.id
+                      ? 'bg-violet-950/60 border-violet-500 text-white shadow-[0_0_20px_rgba(139,92,246,0.35),inset_0_0_20px_rgba(139,92,246,0.08)]'
+                      : 'bg-gray-900/50 border-gray-800 text-gray-500 hover:border-gray-700 hover:text-gray-400'
+                  }`}>
+                  <span className="text-xl block mb-1">{p.icon}</span>
+                  <span className="text-sm font-black block">{p.id}</span>
+                  <span className={`text-[9px] mt-0.5 block uppercase tracking-widest ${platform === p.id ? 'text-violet-400' : 'text-gray-600'}`}>{p.tagline}</span>
+                  {platform === p.id && (
+                    <div className="absolute -top-1 -right-1 w-3 h-3 bg-violet-500 rounded-full shadow-[0_0_8px_rgba(139,92,246,0.6)]"></div>
+                  )}
                 </button>
               ))}
             </div>
