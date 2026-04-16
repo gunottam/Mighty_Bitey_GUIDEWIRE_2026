@@ -1,14 +1,17 @@
 {
-  "name": "backend",
-  "version": "1.0.0",
-  "description": "",
+  "name": "gigaegis-backend",
+  "version": "3.0.0",
+  "description": "GigAegis — AI-Powered Parametric Income Protection Engine for Q-Commerce Workers",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "npx nodemon index.js",
+    "test": "node ../test_chaos.js",
+    "validate": "node -e \"require('./ml/validation').runFullValidation()\""
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["parametric-insurance", "ml", "fraud-detection", "gig-economy"],
+  "author": "Team Mighty Bytey",
+  "license": "MIT",
   "type": "commonjs",
   "dependencies": {
     "axios": "^1.14.0",
