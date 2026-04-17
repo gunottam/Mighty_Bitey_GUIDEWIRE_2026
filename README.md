@@ -6,7 +6,7 @@
 
 [![Build](https://img.shields.io/badge/build-passing-brightgreen?style=flat-square)](#) [![License: MIT](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](#) [![React 19](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](#) [![Vite 8](https://img.shields.io/badge/Vite-8-646cff?style=flat-square&logo=vite)](#) [![Node.js](https://img.shields.io/badge/Node.js-22-339933?style=flat-square&logo=nodedotjs)](#) [![Express 5](https://img.shields.io/badge/Express-5-000000?style=flat-square&logo=express)](#) [![MongoDB](https://img.shields.io/badge/MongoDB-8-47A248?style=flat-square&logo=mongodb)](#) [![Tailwind CSS v4](https://img.shields.io/badge/Tailwind_CSS-v4-38bdf8?style=flat-square&logo=tailwindcss)](#) [![ML: Pure JS](https://img.shields.io/badge/ML-Pure_JavaScript-f7df1e?style=flat-square&logo=javascript)](#)
 
-**Guidewire DEVTrails 2026 · Phase 3 Submission · Team Mighty Bytey**
+**Guidewire DEVTrails 2026 · Phase 3 Submission · Team Mighty Bytey**(#)
 **PPT LINK - https://docs.google.com/presentation/d/1HcO9gxiX9NdfRyq7Xh5PYotHY9gyQEaSnSjo71HBrEI/edit?usp=sharing**
 
 </div>
